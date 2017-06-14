@@ -1,5 +1,5 @@
-var projectName;
-var projectDir;
+var projectName = "";
+var projectDir = "";
 
 function main()
 {
@@ -30,6 +30,7 @@ function createNewProjectDialog()
 	unloadCurrentProject();
 	resetNewProjectDialog();
 	showScreen("new");
+	projectName = "";
 }
 
 function createProject()
@@ -68,6 +69,7 @@ function openProjectDialog()
 	unloadCurrentProject();
 	resetOpenProjectDialog();
 	showScreen("open");
+	projectName = "";
 
 	startFreshMessage.innerText = "Or would you like to start fresh?";
 	openProjectMessage.style.display = "block";
@@ -105,6 +107,7 @@ function deleteProject()
 	if (confirm("Are you sure you would like to delete this project?"))
 		if (confirm("Be honest, are you really sure?\nThis is your last chance!\n\n")) {
 			showScreen("start");
+			currentProject = "";
 			rimraf(projectDir, function() {});
 		}
 }

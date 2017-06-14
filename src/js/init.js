@@ -32,7 +32,7 @@ windowMenu.append(new nw.MenuItem({
 fileMenu.append(new nw.MenuItem({
 	label: 'New Project',
 	click: function() {
-		if (confirm("Changes may not be saved for your current project. Are you sure you would like to continue?"))
+		if (projectName == "" || confirm("Changes may not be saved for your current project. Are you sure you would like to continue?"))
 			createNewProjectDialog();
 	}
 }));
@@ -40,7 +40,7 @@ fileMenu.append(new nw.MenuItem({
 fileMenu.append(new nw.MenuItem({
 	label: 'Open Project',
 	click: function() {
-		if (confirm("Changes may not be saved for your current project. Are you sure you would like to continue?"))
+		if (projectName == "" || confirm("Changes may not be saved for your current project. Are you sure you would like to continue?"))
 			openProjectDialog();
 	}
 }));
