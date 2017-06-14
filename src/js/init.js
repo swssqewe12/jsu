@@ -46,9 +46,9 @@ fileMenu.append(new nw.MenuItem({
 }));
 
 fileMenu.append(new nw.MenuItem({
-	label: 'Save',
+	label: 'Save Project',
 	click: function() {
-		alert("SAVE THIS FILE!")
+		alert("Your project has successfully been saved!\n(Not really because there is nothing to save!)")
 	}
 }));
 
