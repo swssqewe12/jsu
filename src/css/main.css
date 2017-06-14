@@ -77,46 +77,15 @@ button:active {
 	border-bottom: 1px solid #666;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*input {
-	margin: 4px;
-	padding: 6px;
-	border-color: #777;
-	border-width: 0px;
-	border-radius: 2px;
-	background-color: #111;
-	color: #bbb;
-	outline: 0;
-	box-shadow: 0px 0px 2px 1px black;
-	transition: background-color 0.3s, border-color 0.3s, border-width 0s 0.3s, padding 0s 0.3s;
+.text-center {
+	text-align: center;
 }
 
-input:focus {
-	padding: 4px;
-	background-color: #222;
-	border-width: 2px;
-	border-color: #111;
-	/*box-shadow: 2px 2px 2px black;
-	transition: background-color 0.3s, border-color 0.3s;
-}*/
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ib-center {
+	display: inline-block;
+}
