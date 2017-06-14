@@ -69,6 +69,9 @@ function openProjectDialog()
 	resetOpenProjectDialog();
 	showScreen("open");
 
+	startFreshMessage.innerText = "Or would you like to start fresh?";
+	openProjectMessage.style.display = "block";
+
 	var dirs = getDirectories('./projects');
 
 	dirs.forEach(dir => {
@@ -81,6 +84,13 @@ function openProjectDialog()
 		openProjectList.appendChild(button);
 		openProjectList.appendChild(document.createElement("br"));
 	});
+
+	if (dirs.length == 0)
+	{
+		openProjectList.appendChild(document.createTextNode("You haven't actually started working on any projects yet."));
+		startFreshMessage.innerText = "Why don't you start your first amazing project today!"
+		openProjectMessage.style.display = "none";
+	}
 }
 
 function loadProject(name)
