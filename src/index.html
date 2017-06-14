@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>JSUnity</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/init.js"></script>
+</head>
+<body onload="main();">
+
+	<div class="start screen visible">
+		<button onclick="createNewProjectDialog();">Create new project</button>
+		<button onclick="openProjectDialog();">Load existing project</button>
+	</div>
+
+	<div class="project screen">
+		this is ur project!<br><br>
+		Hi, you are in the project <span class="putProjectNameHere"></span><br><br>
+		Would you like to delete this project? <button onclick="deleteProject();">yes</button>
+	</div>
+
+	<div class="new screen">
+		<input type="text" placeholder="Project Name" id="projectNameElement">
+		<button onclick="createProject()">Create</button>
+	</div>
+
+	<div class="open screen">
+		On this screen, this is where you are going to please open a project from the list below:<br><br>
+		<div id="openProjectList">
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="displayError" style="padding: 20px;">
+		<h2> Error displaying project, but your work is safe! </h2><br>
+		An error has caused this window to not display anything. But don't worry, all your work is still here! Follow these steps to get back into action:<br><br>
+		<ul style="margin-left: 35px; list-style-type: circle;">
+			<li style="padding: 3px;"> Save your project that you are working on. </li>
+			<li style="padding: 3px;"> If you still see this screen, restart the application. </li>
+		</ul><br>
+		If this error persists please contact us by (?)<br><br>
+		Thank you for being patient and we are truly sorry for this inconvenience. We hope this will not happen again and we are constantly working on improving this application to where there are no bugs left.
+	</div>
+
+</body>
+<script src="js/main.js"></script>
+</html>

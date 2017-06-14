@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: "Open Sans";	
+	overflow: hidden;
+}
+
+.screen {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background: #222;
+	color: white;
+}
+
+.screen.visible {
+	display: block;
+}

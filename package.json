@@ -1,0 +1,10 @@
+{
+	"name": "JSUnity",
+	"main": "src/index.html",
+	"window": {
+		"width": 960,
+		"height": 640,
+		"min_width": 800,
+		"min_height": 600
+	}
+}
