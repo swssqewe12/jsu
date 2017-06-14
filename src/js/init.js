@@ -30,7 +30,7 @@ windowMenu.append(new nw.MenuItem({
 }));
 
 fileMenu.append(new nw.MenuItem({
-	label: 'New Projcet',
+	label: 'New Project',
 	click: function() {
 		if (confirm("Changes may not be saved for your current project. Are you sure you would like to continue?"))
 			createNewProjectDialog();
