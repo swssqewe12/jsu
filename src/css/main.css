@@ -25,14 +25,15 @@ body {
 input {
 	margin: 5px;
 	padding: 6px 12px;
-	background: linear-gradient(to bottom, #333333 0%,#444444 100%);
+	background: linear-gradient(to bottom, #333333 0%, #444444 100%);
 	box-shadow: inset 0 0 10px black;
 	border-radius: 2px;
 	border: none;
 	outline: none;
 	border-bottom: 1px solid #666;
 	color: #ccc;
-	font-size: "Open Sans";
+	color: #ddd;
+	font-family: "Open Sans";
 	transition: box-shadow 0.3s, border-bottom-color 0.3s;
 }
 
@@ -47,6 +48,34 @@ input:focus {
 }
 
 
+
+button {
+	margin: 5px;
+	padding: 6px 12px;
+	background: linear-gradient(to bottom, #474747 0%, #3F3F3F 100%);
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	border-top: 1px solid #666;
+	color: #eee;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Open Sans";
+	font-size: 11px;
+	box-shadow: 0 0 0px 1px #222;
+	/*transition: background 0.3s, box-shadow 0.3s;*/
+}
+
+button:hover {
+	background: linear-gradient(to bottom, #3B3B3B 0%, #3E3E3E 100%);
+}
+
+button:active {
+	background: linear-gradient(to bottom, #2B2B2B 0%, #3E3E3E 100%);
+	box-shadow: 0 0 0px 1px #222, inset 0 0 3px 0px #222;
+	border: none;
+	border-bottom: 1px solid #666;
+}
 
 
 
