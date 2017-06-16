@@ -111,7 +111,7 @@ function loadProject(name)
 	projectName = name;
 	projectDir = './projects/' + name;
 	showScreen("project");
-	currentProject.innerText = projectName;
+	currentProject.innerText = toTitleCase(projectName);
 }
 
 function deleteProject()

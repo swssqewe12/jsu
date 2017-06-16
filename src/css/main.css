@@ -107,3 +107,40 @@ button:active {
 	-webkit-app-region: drag;
 	-webkit-user-select: none;
 }
+
+#entSection {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: calc(21vw - 1px);
+	height: 70vh;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+
+#mainSection {
+	position: fixed;
+	top: 0px;
+	left: 21vw;
+	width: calc(58vw - 1px);
+	height: 70vh;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+
+#propSection {
+	position: fixed;
+	top: 0px;
+	left: 79vw;
+	width: 21vw;
+	height: 70vh;
+	border-bottom: 1px solid #555;
+}
+
+#assetsSection {
+	position: fixed;
+	top: calc(70vh + 1px);
+	left: 0px;
+	width: 100vw;
+	height: calc(30vh - 1px);
+}
