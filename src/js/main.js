@@ -1,6 +1,13 @@
 var projectName = "";
 var projectDir = "";
 
+var screen_titles = {
+	"start": "",
+	"project": "*projectName",
+	"new": "Create Project",
+	"open": "Open Project"
+}
+
 function main()
 {
 
@@ -12,6 +19,11 @@ function showScreen(name)
 		screen.classList.remove("visible");
 	});
 	document.querySelector("."+name).classList.add("visible");
+
+	var title = screen_titles[name];
+	if (title.startsWith("*"))
+		title = window[title.substring(1)];
+	setTitle(title);
 }
 
 function unloadCurrentProject()
@@ -52,8 +64,7 @@ function createProject()
 		}
 		else
 		{
-			// do other stuff
-			showScreen("project");
+			loadProject(projectName);
 		}
 	});
 }
@@ -100,6 +111,7 @@ function loadProject(name)
 	projectName = name;
 	projectDir = './projects/' + name;
 	showScreen("project");
+	currentProject.innerText = projectName;
 }
 
 function deleteProject()
@@ -107,7 +119,7 @@ function deleteProject()
 	if (confirm("Are you sure you would like to delete this project?"))
 		if (confirm("Be honest, are you really sure?\nThis is your last chance!\n\n")) {
 			showScreen("start");
-			currentProject = "";
+			projectName = "";
 			rimraf(projectDir, function() {});
 		}
 }

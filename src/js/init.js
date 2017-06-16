@@ -52,6 +52,20 @@ fileMenu.append(new nw.MenuItem({
 	}
 }));
 
+fileMenu.append(new nw.MenuItem({
+	type: 'separator'
+}));
+
+fileMenu.append(new nw.MenuItem({
+	label: 'Delete Project',
+	click: function() {
+		if (projectName == "")
+			alert("You do not have any projects open at the moment!\nPlease open a project first and then delete it.")
+		else
+			deleteProject()
+	}
+}));
+
 helpMenu.append(new nw.MenuItem({
 	label: 'About',
 	click: function() {
@@ -61,10 +75,20 @@ helpMenu.append(new nw.MenuItem({
 
 win.menu = windowMenu;
 
+// Initial title
+
+setTitle("");
+
 // Some global functions
 
 function getDirectories (srcpath)
 {
   return fs.readdirSync(srcpath)
     .filter(file => fs.lstatSync(path.join(srcpath, file)).isDirectory())
+}
+
+function setTitle(title)
+{
+	var appName = "Jsu";
+	document.title = (title == "" ? "" : title + " - ") + appName;
 }

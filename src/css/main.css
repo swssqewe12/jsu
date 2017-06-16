@@ -22,6 +22,19 @@ body {
 	display: block;
 }
 
+.section-title {
+	width: calc(100% - 10px);
+	padding: 5px;
+	background: #333;
+	border-bottom: 1px solid #555;
+	color: #eee;
+	font-size: 11px;
+	font-weight: 600;
+	/*text-transform: uppercase;*/
+	letter-spacing: 1px;
+	text-align: center;
+}
+
 input {
 	margin: 5px;
 	padding: 6px 12px;
@@ -88,4 +101,9 @@ button:active {
 
 .ib-center {
 	display: inline-block;
+}
+
+#currentProject {
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
 }
