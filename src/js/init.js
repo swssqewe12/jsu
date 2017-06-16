@@ -17,11 +17,23 @@ var windowMenu = new nw.Menu({
 });
 
 var fileMenu = new nw.Menu();
+var prefabsMenu = new nw.Menu();
+var componentsMenu = new nw.Menu();
 var helpMenu = new nw.Menu();
 
 windowMenu.append(new nw.MenuItem({
 	label: 'File',
 	submenu: fileMenu
+}));
+
+windowMenu.append(new nw.MenuItem({
+	label: 'Prefabs',
+	submenu: prefabsMenu
+}));
+
+windowMenu.append(new nw.MenuItem({
+	label: 'Components',
+	submenu: componentsMenu
 }));
 
 windowMenu.append(new nw.MenuItem({
@@ -63,6 +75,23 @@ fileMenu.append(new nw.MenuItem({
 			alert("You do not have any projects open at the moment!\nPlease open a project first and then delete it.")
 		else
 			deleteProject()
+	}
+}));
+
+prefabsMenu.append(new nw.MenuItem({
+	label: 'Create Prefab',
+	click: function() {
+		if (projectName == "")
+			alert("Don't be stupid, you need to be in a project to do this!");
+		else
+			alert("Not yet implemented!");
+	}
+}));
+
+componentsMenu.append(new nw.MenuItem({
+	label: 'Create Component Type',
+	click: function() {
+		alert("Soon!");
 	}
 }));
 
