@@ -91,7 +91,10 @@ prefabsMenu.append(new nw.MenuItem({
 componentsMenu.append(new nw.MenuItem({
 	label: 'Create Component Type',
 	click: function() {
-		alert("Soon!");
+		if (projectName == "")
+			alert("Don't be stupid, you need to be in a project to do this!");
+		else
+			createNewComponent();
 	}
 }));
 

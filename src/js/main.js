@@ -5,7 +5,8 @@ var screen_titles = {
 	"start": "",
 	"project": "*projectName",
 	"new": "Create Project",
-	"open": "Open Project"
+	"open": "Open Project",
+	"newcomponent": "Create New Component Type"
 }
 
 function main()
@@ -122,4 +123,9 @@ function deleteProject()
 			projectName = "";
 			rimraf(projectDir, function() {});
 		}
+}
+
+function createNewComponent()
+{
+	showScreen("newcomponent");
 }
