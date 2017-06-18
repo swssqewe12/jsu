@@ -57,8 +57,8 @@ function createProject()
 		return;
 	}
 
-	mkdirp(projectDir + "/web", err => {
-
+	err_func = err =>
+	{
 		if (err)
 		{
 			alert("Error has occured creating your project!\n\nTry figure this one out yourself.");
@@ -67,7 +67,11 @@ function createProject()
 		{
 			loadProject(projectName);
 		}
-	});
+	}
+
+	mkdirp(projectDir + "/web", err_func);
+	mkdirp(projectDir + "/data/componentTypes", err_func);
+
 }
 
 function resetOpenProjectDialog()
