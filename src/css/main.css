@@ -109,38 +109,38 @@ button:active {
 }
 
 #entSection {
-	position: fixed;
+	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: calc(21vw - 1px);
-	height: 70vh;
+	width: calc(21% - 1px);
+	height: 70%;
 	border-right: 1px solid #555;
 	border-bottom: 1px solid #555;
 }
 
 #mainSection {
-	position: fixed;
+	position: absolute;
 	top: 0px;
-	left: 21vw;
-	width: calc(58vw - 1px);
-	height: 70vh;
+	left: 21%;
+	width: calc(58% - 1px);
+	height: 70%;
 	border-right: 1px solid #555;
 	border-bottom: 1px solid #555;
 }
 
 #propSection {
-	position: fixed;
+	position: absolute;
 	top: 0px;
-	left: 79vw;
-	width: 21vw;
-	height: 70vh;
+	left: 79%;
+	width: 21%;
+	height: 70%;
 	border-bottom: 1px solid #555;
 }
 
 #assetsSection {
-	position: fixed;
-	top: calc(70vh + 1px);
+	position: absolute;
+	top: calc(70% + 1px);
 	left: 0px;
-	width: 100vw;
-	height: calc(30vh - 1px);
+	width: 100%;
+	height: calc(30% - 1px);
 }
