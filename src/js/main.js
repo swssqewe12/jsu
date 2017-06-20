@@ -77,7 +77,6 @@ function createProject()
 function resetOpenProjectDialog()
 {
 	openProjectList.innerHTML = "";
-
 }
 
 function openProjectDialog()
@@ -129,7 +128,23 @@ function deleteProject()
 		}
 }
 
+function resetNewComponentDialog()
+{
+
+}
+
+function newComponentDialog()
+{
+	resetNewComponentDialog();
+	showScreen("new_component");
+} 
+
 function createNewComponent()
 {
-	showScreen("newcomponent");
+	//showScreen("newcomponent");
+}
+
+function myComponents()
+{
+
 }

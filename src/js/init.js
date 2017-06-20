@@ -9,8 +9,27 @@ const mkdirp = require('mkdirp');
 const fs = require('fs');
 const path = require('path')
 const rimraf = require('rimraf');
+const openInEditor = require('open-in-editor')
 
-// Menus and stuff
+// Editors
+
+var editor = openInEditor.configure({'editor': 'sublime'},
+
+	function(err)
+	{
+		editor = openInEditor.configure({'editor': 'atom'},
+
+			function(error)
+			{
+				editor = null;
+			}
+
+		);
+	}
+
+);
+
+// Window Menu
 
 var windowMenu = new nw.Menu({
 	type: 'menubar'
@@ -92,9 +111,9 @@ componentsMenu.append(new nw.MenuItem({
 	label: 'Create Component Type',
 	click: function() {
 		if (projectName == "")
-			alert("Don't be stupid, you need to be in a project to do this!");
+			alert("You actually have to be in a project to create a component!");
 		else
-			createNewComponent();
+			newComponentDialog();
 	}
 }));
 
@@ -106,6 +125,10 @@ helpMenu.append(new nw.MenuItem({
 }));
 
 win.menu = windowMenu;
+
+// Context Menu : My Components
+
+var menu_mc = new nw.Menu()
 
 // Initial title
 

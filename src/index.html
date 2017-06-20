@@ -30,14 +30,21 @@
 			</div>
 			<div id="assetsSection">
 				<div class="section-title">Assets, Scripts and Prefabs</div>
+				<button onclick="newComponentDialog();">Create Component Type</button>
+				<button onclick="myComponents();">My Components</button><br>
 			</div>
 		</div>
 	</div>
 
-	<div class="newcomponent screen">
-		Componets are now created using code!!!<br>
-		Create your component through the assets and scripts section.<br><br>
-		<button onclick="showScreen('project')">Back to my amazing project!</button>
+	<div class="new_component screen">
+		<br><br><br><br>
+		<div class="text-center">
+			<h2> Create Component Type </h2><br><br>
+			<div class="ib-center">
+				<input type="text" placeholder="Component Name"><br>
+				<button onclick="createNewComponent();">Create</button><button onclick="showScreen('project')">Cancel</button>
+			</div>
+		</div>
 	</div>
 
 	<div class="new screen text-center">
